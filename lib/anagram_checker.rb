@@ -1,6 +1,6 @@
 class String
   define_method(:sort_word) do
-    self.downcase().chars().sort().join()
+    self.downcase.chars.sort.join
   end
 
   define_method(:get_anagrams) do |arg1 = nil, arg2 = nil, arg3 = nil|
@@ -25,10 +25,8 @@ class String
         anagrams.push(word)
       end
     end
-    if anagrams.empty?()
-      "Error: there are no anagrams."
-    else
-    anagrams.join(", ")
-    end
+
+    anagrams
+
   end
 end
